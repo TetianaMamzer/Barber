@@ -22,6 +22,7 @@
     background-color: transparent;
     border: none;
 
+
     // ховер та фокус
     &:hover,
     &:focus {
@@ -49,10 +50,12 @@
 
 .icon-menu {
     fill: currentColor;
+    
 }
 
 .icon-cross {
     fill: getColor('title');
+    
 }
 
 // Бекдроп

@@ -28,7 +28,7 @@
 <body class="page-body">
 
     <!-- Шапка сайту -->
-    <header class="page-header " data-header data-aos="fade-down" data-aos-easing="ease-out-cubic"
+    <header class="page-header js-no-transparency" data-header data-aos="fade-down" data-aos-easing="ease-out-cubic"
         data-aos-duration="1000">
         <div class="container page-header__container">
 
@@ -135,28 +135,7 @@
                         Працюємо швидко, обережно та зі смаком.
                     </p>
                 </div>
-
-                <!-- Слайдер -->
-                <div class="slider">
-                    <ul class="slider__pagination list" data-aos="fade-left" data-aos-easing="ease-out-cubic"
-                        data-aos-duration="1000" data-aos-delay="300">
-                        <li class="slider__item slider__item--active"></li>
-                        <li class="slider__item"></li>
-                        <li class="slider__item"></li>
-                    </ul>
-
-                    <!-- Кнопки перемикання слайдів -->
-                    <ul class="slider__controls list" data-aos="fade-left" data-aos-easing="ease-out-cubic"
-                        data-aos-duration="1000" data-aos-delay="300">
-                        <li class="slider__item-control">
-                            <button class="slider__btn slider__btn--prev " type="button">Назад</button>
-                        </li>
-                        <li class="slider__item-control">
-                            <button class="slider__btn slider__btn--next slider__btn--active"
-                                type="button">Вперед</button>
-                        </li>
-                    </ul>
-                </div>
+            </div>
 
             </div>
 
@@ -168,8 +147,8 @@
 
                 <!-- Фотографії -->
                 <ul class="photos grid list">
-                    <li class="photos__item grid__item" data-aos="fade-up" data-aos-easing="ease-out-cubic"
-                        data-aos-duration="1000" data-aos-delay="100">
+                    <li class="photos__item grid__item" data-aos="fade-down" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="600" data-aos-delay="100">
                         <picture>
                             <!-- розширення webp -->
                             <source srcset="
@@ -196,8 +175,8 @@
 
                     </li>
 
-                    <li class="photos__item grid__item" data-aos="fade-down" data-aos-easing="ease-out-cubic"
-                        data-aos-duration="1000" data-aos-delay="200">
+                    <li class="photos__item grid__item" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="600" data-aos-delay="200">
                         <picture>
                             <!-- розширення webp -->
                             <source srcset="
@@ -227,29 +206,23 @@
 
                 <!-- Опис -->
                 <div class="about__description-group">
-                    <p class="uppertitle uppertitle--light-mode" data-aos="fade-left" data-aos-easing="ease-out-cubic"
-                        data-aos-duration="1000" data-aos-delay="100">ПРО НАС</p>
+                    <p class="uppertitle uppertitle--light-mode" >ПРО НАС</p>
 
                     <!-- Заголовок розділів -->
-                    <h2 class="title title--about-mb title--light-mode" data-aos="fade-left"
-                        data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="200">
+                    <h2 class="title title--about-mb title--light-mode" >
                         Кращий Барбершоп твого міста
                     </h2>
-                    <p class="subtitle subtitle--about-mb" data-aos="fade-left" data-aos-easing="ease-out-cubic"
-                        data-aos-duration="1000" data-aos-delay="300">
+                    <p class="subtitle subtitle--about-mb" >
                         Якщо ти хочеш додати у свій образ більше впевненості, тобі точно до нас.
                     </p>
-                    <p class="description-txt" data-aos="fade-left" data-aos-easing="ease-out-cubic"
-                        data-aos-duration="1000" data-aos-delay="400">
+                    <p class="description-txt" >
                         Ми команда, яка ніколи не зупиняється на досягнутому
                         і прагне змін. І коли ти потрапиш до рук нашого майстра,
                         то вже ніколи не зможеш бути тим самим. Ми команда, яка завжди з клієнтами "на одній хвилі".
                         Тому ми завжди
                         готові вдосконалити кожного, хто до нас приходить!
                     </p>
-                    <button class="btn btn--light-mode" type="button" data-aos="fade-left"
-                        data-aos-easing="ease-out-cubic" data-aos-duration="1000"
-                        data-aos-delay="500">онлайн-запис</button>
+                    <button class="btn btn--light-mode" type="button" data-modal-open>онлайн-запис</button>
                 </div>
             </div>
         </section>
@@ -257,18 +230,16 @@
         <!-- Розділ послуги т ціни -->
         <section class="section price" id="price">
             <div class="container">
-                <p class="uppertitle uppertitle--dark-mode" data-aos="fade-left" data-aos-easing="ease-out-cubic"
-                    data-aos-duration="1000" data-aos-delay="100">Проведи час у компанії кращих майстрів</p>
+                <p class="uppertitle uppertitle--dark-mode">Проведи час у компанії кращих майстрів</p>
 
                 <!-- Заголовок розділів -->
-                <h2 class="title title--dark-mode" data-aos="fade-right" data-aos-easing="ease-out-cubic"
-                    data-aos-duration="1000" data-aos-delay="200">Послуги та ціни</h2>
+                <h2 class="title title--dark-mode" >Послуги та ціни</h2>
 
                 <!-- Таблиці цін -->
                 <ul class="price-list list">
 
                     <li class="price-list__item" data-aos="fade-up" data-aos-easing="ease-out-cubic"
-                        data-aos-duration="1000" data-aos-delay="400">
+                        data-aos-duration="600" data-aos-delay="400">
 
                         <!-- Блок цін -->
                         <ul class="price-inner list">
@@ -292,7 +263,7 @@
                     </li>
 
                     <li class="price-list__item" data-aos="fade-down" data-aos-easing="ease-out-cubic"
-                        data-aos-duration="1000" data-aos-delay="500">
+                        data-aos-duration="600" data-aos-delay="500">
 
                         <!-- Блок цін -->
                         <ul class="price-inner list">
@@ -319,8 +290,8 @@
 
                 <!-- Кнопка -->
                 <div class="price__wrapper" data-aos="fade-down" data-aos-easing="ease-out-cubic"
-                    data-aos-duration="1000" data-aos-delay="500">
-                    <button class="btn btn--dark-mode" type="button">онлайн-запис</button>
+                    data-aos-duration="600" data-aos-delay="200">
+                    <button class="btn btn--dark-mode" type="button" data-modal-open>онлайн-запис</button>
                 </div>
             </div>
         </section>
@@ -333,8 +304,7 @@
                 <div class="benefits__left-side">
                     <ul class="benefits__list list">
                         <div>
-                            <li class="benefits__item" data-aos="zoom-out" data-aos-easing=" ease-out-cubic"
-                                data-aos-duration="1000" data-aos-delay="100">
+                            <li class="benefits__item" >
                                 <p class="benefits__amount">
                                     600
                                     <sup class="benefits__decor">&#43;</sup>
@@ -342,8 +312,7 @@
                                 <p class="benefits__desc">Задоволених клієнтів на день</p>
                             </li>
 
-                            <li class="benefits__item" data-aos="zoom-out" data-aos-easing=" ease-out-cubic"
-                                data-aos-duration="1000" data-aos-delay="200">
+                            <li class="benefits__item" >
                                 <p class="benefits__amount">
                                     50
                                     <sup class="benefits__decor">&#43;</sup>
@@ -353,8 +322,7 @@
                         </div>
 
                         <div class="benefits__wrapper">
-                            <li class="benefits__item" data-aos="zoom-out" data-aos-easing=" ease-out-cubic"
-                                data-aos-duration="1000" data-aos-delay="300">
+                            <li class="benefits__item" >
                                 <p class="benefits__amount">
                                     20
                                     <sup class="benefits__decor">&#43;</sup>
@@ -362,8 +330,7 @@
                                 <p class="benefits__desc">Найкращих майстрів Києва</p>
                             </li>
 
-                            <li class="benefits__item" data-aos="zoom-out" data-aos-easing=" ease-out-cubic"
-                                data-aos-duration="1000" data-aos-delay="400">
+                            <li class="benefits__item" >
                                 <p class="benefits__amount">
                                     100
                                     <sup class="benefits__decor">&#43;</sup>
@@ -376,14 +343,11 @@
 
                 <!-- Права чатстина -->
                 <div class="benefits__right-side">
-                    <p class="uppertitle uppertitle--light-mode" data-aos="fade-left" data-aos-easing="ease-out-cubic"
-                        data-aos-duration="1000" data-aos-delay="500">стара традиційна школа</p>
+                    <p class="uppertitle uppertitle--light-mode">стара традиційна школа</p>
 
                     <!-- Заголовок розділів -->
-                    <h2 class="title title--light-mode" data-aos="fade-left" data-aos-easing="ease-out-cubic"
-                        data-aos-duration="1000" data-aos-delay="600">Чому приходять саме до нас?</h2>
-                    <p class="subtitle" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000"
-                        data-aos-delay="700">
+                    <h2 class="title title--light-mode">Чому приходять саме до нас?</h2>
+                    <p class="subtitle">
                         Про нас говорять лише добре. Але краще 1 раз побачити та відчути,
                         ніж 10 разів прочитати.
                     </p>
@@ -395,18 +359,16 @@
         <section class="section team" id="team">
 
             <div class="container">
-                <p class="uppertitle uppertitle--light-mode" data-aos="fade-left" data-aos-easing="ease-out-cubic"
-                    data-aos-duration="1000" data-aos-delay="100">для справжніх поціновувачів атмосфери</p>
+                <p class="uppertitle uppertitle--light-mode">для справжніх поціновувачів атмосфери</p>
 
                 <!-- Заголовок розділів -->
-                <h2 class="title team__title title--light-mode" data-aos="fade-right" data-aos-easing="ease-out-cubic"
-                    data-aos-duration="1000" data-aos-delay="200">Наші майстри</h2>
+                <h2 class="title team__title title--light-mode">Наші майстри</h2>
 
                 <!-- Список нашої команди -->
                 <ul class="grid team__list list">
 
-                    <li class="grid__item team__item" data-aos="zoom-in-up" data-aos-easing="ease-out-cubic"
-                        data-aos-duration="1000" data-aos-delay="300">
+                    <li class="grid__item team__item" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="600" data-aos-delay="200">
 
                         <!-- Фото -->
                         <picture>
@@ -490,8 +452,8 @@
                         </ul>
                     </li>
 
-                    <li class="grid__item team__item" data-aos="zoom-in-up" data-aos-easing="ease-out-cubic"
-                        data-aos-duration="1000" data-aos-delay="400">
+                    <li class="grid__item team__item" data-aos="fade-down" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="600" data-aos-delay="200">
 
                         <!-- Фото -->
                         <picture>
@@ -575,8 +537,8 @@
                         </ul>
                     </li>
 
-                    <li class="grid__item team__item" data-aos="zoom-in-up" data-aos-easing="ease-out-cubic"
-                        data-aos-duration="1000" data-aos-delay="500">
+                    <li class="grid__item team__item" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="600" data-aos-delay="200">
 
                         <!-- Фото -->
                         <picture>
@@ -668,8 +630,7 @@
         <section class="section portfolio">
 
             <div class="container">
-                <p class="uppertitle uppertitle--light-mode portfolio__uppertitle" data-aos="fade-left"
-                    data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="100">Латинською мовою
+                <p class="uppertitle uppertitle--light-mode portfolio__uppertitle">Латинською мовою
                     "барба" означає
                     "борода"</p>
 
@@ -678,8 +639,7 @@
 
                 <!-- Список робіт -->
                 <ul class="grid list">
-                    <li class="grid__item portfolio__item" data-aos="flip-down" data-aos-easing="ease-out-cubic"
-                        data-aos-delay="200">
+                    <li class="grid__item portfolio__item">
 
                         <!-- Фото -->
                         <picture>
@@ -715,8 +675,7 @@
                         </picture>
                     </li>
 
-                    <li class="grid__item portfolio__item" data-aos="flip-up" data-aos-easing="ease-out-cubic"
-                        data-aos-delay="300">
+                    <li class="grid__item portfolio__item">
 
                         <!-- Фото -->
                         <picture>
@@ -752,8 +711,7 @@
                         </picture>
                     </li>
 
-                    <li class="grid__item portfolio__item" data-aos="flip-down" data-aos-easing="ease-out-cubic"
-                        data-aos-delay="400">
+                    <li class="grid__item portfolio__item">
 
                         <!-- Фото -->
                         <picture>
@@ -789,8 +747,7 @@
                         </picture>
                     </li>
 
-                    <li class="grid__item portfolio__item" data-aos="flip-up" data-aos-easing="ease-out-cubic"
-                        data-aos-delay="500">
+                    <li class="grid__item portfolio__item">
 
                         <!-- Фото -->
                         <picture>
@@ -837,15 +794,13 @@
 
                 <!-- Форма запису на послугу -->
                 <div class="contact__left-side">
-                    <h2 class="title contact__title" data-aos="fade-right" data-aos-easing="ease-out-cubic"
-                        data-aos-duration="1000" data-aos-delay="100">Онлайн-запис</h2>
+                    <h2 class="title contact__title">Онлайн-запис</h2>
 
                     <form class="form">
 
                         <!-- Дані замовника -->
                         <div class="form__wrapper">
-                            <label class="form__group" data-aos="fade-up" data-aos-easing="ease-out-cubic"
-                                data-aos-duration="1000" data-aos-delay="200">
+                            <label class="form__group">
                                 <input class="form__input placeholder" type="text" name="user-name"
                                     placeholder="Jon Snow" minlength="3" required>
 
@@ -861,8 +816,7 @@
                                 </svg>
                             </label>
 
-                            <label class="form__group" data-aos="fade-up" data-aos-easing="ease-out-cubic"
-                                data-aos-duration="1000" data-aos-delay="300">
+                            <label class="form__group">
                                 <input class="form__input placeholder" type="text" name="user-phone"
                                     placeholder="+38 (099) 123-45-67" required>
 
@@ -880,16 +834,14 @@
                         </div>
 
                         <!-- Повідомлення -->
-                        <label class="form__message-group" data-aos="fade-up" data-aos-easing="ease-out-cubic"
-                            data-aos-duration="1000" data-aos-delay="400">
+                        <label class="form__message-group">
 
                             <textarea class="form__message placeholder" name="user-messag" rows="5"
                                 placeholder="Введіть повідомлення"></textarea>
                             <span class="form__message-label">Повідомлення</span>
                         </label>
 
-                        <div class="form__btn-wrapper" data-aos="fade-right" data-aos-easing="ease-out-cubic"
-                            data-aos-duration="1000" data-aos-delay="500">
+                        <div class="form__btn-wrapper" >
                             <button class="btn btn--dark-mode" type="button">Надіслати</button>
                         </div>
                     </form>
@@ -898,12 +850,12 @@
                 <!-- Контакти сайту -->
                 <div class="contact__right-side">
                     <h2 class="title contact__title title--dark-mode" data-aos="fade-left"
-                        data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="100">Контакти</h2>
+                        data-aos-easing="ease-out-cubic" data-aos-duration="600" data-aos-delay="60">Контакти</h2>
                     <div class="contact__wrapper">
                         <address class="contact__links">
                             <ul class="list">
                                 <li class="contact__item" data-aos="fade-left" data-aos-easing="ease-out-cubic"
-                                    data-aos-duration="1000" data-aos-delay="200">
+                                    data-aos-duration="600" data-aos-delay="200">
                                     <a class="contact__link" href="https://goo.gl/maps/S13B71cPM89bUmLEA"
                                         target="_blank" rel="noopener noreferrer" aria-label="Адреса сайту">
                                         <svg class="contact__icon">
@@ -914,7 +866,7 @@
                                     </a>
                                 </li>
                                 <li class="contact__item" data-aos="fade-left" data-aos-easing="ease-out-cubic"
-                                    data-aos-duration="1000" data-aos-delay="300">
+                                    data-aos-duration="600" data-aos-delay="300">
                                     <a class="contact__link" href="tel:+380441111111" target="_blank"
                                         rel="noopener noreferrer" aria-label="Номер телефону сайту">
                                         <svg class="contact__icon">
@@ -924,7 +876,7 @@
                                     </a>
                                 </li>
                                 <li class="contact__item" data-aos="fade-left" data-aos-easing="ease-out-cubic"
-                                    data-aos-duration="1000" data-aos-delay="400">
+                                    data-aos-duration="600" data-aos-delay="400">
                                     <a class="contact__link" href="mailto:barbershop@email.com" target="_blank"
                                         rel="noopener noreferrer" aria-label="E-mail сайту">
                                         <svg class="contact__icon">
@@ -938,12 +890,12 @@
 
                         <div class="contact__group">
                             <h3 class="uppertitle uppertitle--dark-mode"><span class="contact__uppertitle"
-                                    data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000"
+                                    data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="600"
                                     data-aos-delay="500">час
                                     роботи</span>
                             </h3>
                             <p class="contact__time" data-aos="fade-left" data-aos-easing="ease-out-cubic"
-                                data-aos-duration="1000" data-aos-delay="500">Щодня з
+                                data-aos-duration="600" data-aos-delay="500">Щодня з
                                 <time datetime="09:00">9:00</time>
                                 до
                                 <time datetime="22:00">22:00</time>
@@ -1087,7 +1039,6 @@
     </div>
 
     <!-- Скрипти -->
-    <script src="./js/header-scroll.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
 
