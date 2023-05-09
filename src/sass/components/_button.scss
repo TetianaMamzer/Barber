@@ -21,20 +21,6 @@
     border-radius: 25px;
     cursor: pointer;
 
-    transition: 
-        color $animation,
-        background-color $animation;
-
-    // на темному фоні
-    &--dark-mode {
-        color: getColor('white');   
-    }
-
-    // на світлому фоні
-    &--light-mode {
-        color: getColor('title'); 
-    }
-
     // ховер та фокус
     &:hover,
     &:focus {
@@ -42,16 +28,6 @@
         color: getColor('white');
         outline: transparent;
     }
-
-    // анімація (розділ хеадер)
-    &--anim-pulse {
-        animation: animate_pulse 1.5s infinite;
-    }
-
     // планшет
-    @media screen and (min-width: 768px) {
-        &--page-header {
-            color: getColor('white');
-        }
-    }
+
 }
