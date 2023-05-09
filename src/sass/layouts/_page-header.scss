@@ -1,0 +1,44 @@
+// Шапка сайту
+.page-header {
+    position: fixed;
+    top: 0;
+    z-index: 5;
+
+    width: 100%;
+   
+    transition:  
+        background-color $anim-slow,
+        backdrop-filter $anim-slow,
+        box-shadow $anim-slow;
+
+    &.js-no-transparency {
+        background-color: rgba(16, 18, 27, 0.4);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 10px rgba(25, 28, 38, 0.4);
+    }
+}
+
+.page-header__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+// Логотип
+.logo {
+    fill: getColor('white');
+    
+    transition: fill $anim-slow;
+
+    // планшет
+    @media screen and (min-width: 768px) {
+        fill: getColor('title');
+    }
+}
+
+// Логотип на темному фоні
+.page-header.js-no-transparency {
+    .logo {
+        fill: getColor('white');
+    }
+}

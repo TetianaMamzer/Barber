@@ -1,0 +1,237 @@
+// Форма для розділу контакти
+.contact__left-side {
+    flex-basis: 50%;
+
+    // телефон
+    @media screen and (max-width: 767.5px) {
+        padding-bottom: 84px;
+    }
+
+    // планшет
+    @media screen and (max-width: 1199.5px) {
+        padding-bottom: 100px;
+    }
+}   
+
+.form__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    // телефон
+    @media screen and (max-width: 767.5px) {
+        flex-wrap: wrap;
+    }
+}
+
+.form__group {
+    position: relative;
+    margin-bottom: 44px;
+    flex-basis: 100%;
+}
+
+.form__input {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+
+    width: 100%;
+    height: 26px;
+
+    color: getColor('white');
+    background-color: transparent;
+
+    outline: transparent;
+    border: none;
+    border-bottom: 1px solid getColor('secondary-bg-cl');
+
+    transition: border-color $animation;
+
+    // фокус
+    &:focus,
+    &:not(:placeholder-shown) {
+        border-color: getColor('white');
+
+        // не валдні дані
+        &:invalid:not(:placeholder-shown) {
+            border-color: getColor('warnning-cl');
+        }
+
+        // валідні дані
+        &:valid:not(:placeholder-shown) {
+            border-color: getColor('success-cl');
+        }
+    }
+}
+
+// плейсхолдер
+.placeholder{
+    &::placeholder {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 1.36;
+        letter-spacing: 0.1em;
+
+        color: getColor('secondary-bg-cl');
+        opacity: 0;
+
+        transition: opacity $animation;
+    }
+
+    // фокус
+    &:focus::placeholder {
+        opacity: 1;
+    }
+}
+
+// Підпис
+.form__label {
+    position: absolute;
+    top: 50%;       
+    left: 0;
+
+    display: block;
+
+    transform: translateY(-50%);
+}    
+
+.form__label,
+.form__message-label {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: getColor('secondary-bg-cl');
+
+    transition:
+        color $animation,
+        transform $animation,
+        transform-origin $animation;
+}
+
+.decor {
+    color: getColor('accent');
+}
+
+// фокус для підпису
+.form__input:focus+.form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+    color: getColor('white');
+    transform: translateY(-30px);
+    transform-origin: top left;
+}
+
+// ховер для інпуту та підпису
+.form__group:hover{
+    & > .form__input,
+    & > .form__label {
+            color: getColor('white');
+            border-color: getColor('white');
+        }
+}
+
+// Іконки та текст валдіності даних
+.form__txt-error {
+    position: absolute;
+    left: 0;
+    bottom: -80%;
+
+    font-size: 9px;
+} 
+
+.form__icons-error{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.icon-attention,
+.txt-error {
+    color: getColor('warnning-cl');
+    fill: getColor('warnning-cl');
+    opacity: 0;
+
+    transition: opacity $animation;
+}
+
+.icon-success {
+    fill: getColor('success-cl');
+    opacity: 0;
+
+    transition: opacity $animation;
+}
+
+// Валідність введених даних
+.form__input:focus:invalid ~ .form__icons-error .icon-attention,
+.form__input:focus:invalid ~ .form__txt-error {
+    opacity: 1;
+}
+
+.form__input:focus:valid ~ .form__icons-error .icon-success,
+.form__input:valid:not(:placeholder-shown) ~ .form__icons-error .icon-success {
+    opacity: 1;
+}
+
+// Повідомлення
+.form__message-group {
+    position: relative;
+    display: block;
+
+    height: 81px;
+}
+
+.form__message {
+    width: 96%;
+
+    color: getColor('white');
+    background-color: transparent;
+    
+    border: none;
+    border-bottom: 1px solid getColor('secondary-bg-cl');
+    resize: none;
+    outline: transparent;
+
+    transition: border-color $animation;
+
+    // фокус
+    &:focus,
+    &:not(:placeholder-shown) {
+        border-color: getColor('white');
+    }
+}
+
+.form__message-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.form__message:focus + .form__message-label,
+.form__message:not(:placeholder-shown) + .form__message-label {
+    color: getColor('white');
+    transform: translateY(-20px);
+    transform-origin: top left;
+}
+
+// ховер
+.form__message-group:hover {
+    & > .form__message,
+    & > .form__message-label {
+        color: getColor('white');
+        border-color: getColor('white');
+    }
+}
+
+.form__btn-wrapper {
+    margin-top: 64px;
+
+    // телефон
+    @media screen and (max-width: 767.5px) {
+        text-align: center;
+    }
+}

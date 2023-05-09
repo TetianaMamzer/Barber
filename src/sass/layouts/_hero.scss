@@ -1,0 +1,252 @@
+// Розділ Герой
+.hero {
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 480px;
+    max-height: 580px;
+
+    text-align: center;
+
+    background-color: getColor('main-bg-cl');
+    background-position: top right, center;
+    background-size: 480px 580px, cover;
+    background-repeat: no-repeat;
+
+    // фонові зображення
+    @media screen and (max-width: 576px) {
+        background-image: 
+        url(../img/hero/mobile/slider3.jpg);
+    }
+
+    @media screen and (min-width: 577px) and (max-width: 1199px) {
+        background-image: 
+            url(../img/hero/tablet/slider3.jpg),
+            linear-gradient(to right, #fff 25%, #191c26 12%);
+    }
+
+    @media screen and (min-width: 1200px) {
+        background-image:
+            url(../img/hero/pc/slider3.jpg),
+            linear-gradient(to right, #fff 25%, #191c26 12%);
+    }
+
+    // планшет
+    @media screen and (min-width: 768px) {
+        max-width: 768px;
+        max-height: 680px;
+
+        background-size: 609px 680px, cover;
+    }
+
+    // пк
+    @media screen and (min-width: 1200px) {
+        max-width: 1280px;
+
+        background-size: 1125px 680px, cover;
+    }
+}
+
+// Фонове зображення для retina-екранів
+@media screen and (max-width: 576px) {
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: 
+                url(../img/hero/mobile/slider3-2x.jpg);
+        }
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 1199px) {
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: 
+                url(../img/hero/tablet/slider3-2x.jpg),
+                linear-gradient(to right, #fff 25%, #191c26 12%);
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: 
+                url(../img/hero/pc/slider3-2x.jpg),
+                linear-gradient(to right, #fff 25%, #191c26 12%);
+        }
+    }
+}
+
+.hero__container {
+    position: relative;
+    display: flex;
+}
+
+// Оффер
+.hero__group{
+    flex-grow: 1;
+    padding-top: 208px;
+    padding-bottom: 183px;
+
+    max-width: 306px;
+   
+    // планшет
+    @media screen and (min-width: 768px) {
+        margin-left: 140px;
+        padding-top: 272px;
+        padding-bottom: 245px;
+
+        max-width: 355px;
+    }
+
+    // пк
+    @media screen and (min-width: 1200px) {
+        margin-left: 100px;
+        padding-bottom: 206px;
+
+        max-width: 475px;
+    }
+}
+
+.main-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.16;
+    letter-spacing: 0.05em;
+
+    color: getColor('white');
+
+    // планшет
+    @media screen and (min-width: 768px) {
+        text-align: start;
+    }
+
+    // пк
+    @media screen and (min-width: 1200px) {
+        font-size: 72px;
+        line-height: 1.18;
+    }
+}
+
+.subtitle--hero-mb {
+    // телефон та планшет
+    @media screen and (max-width: 1199px) {
+        font-size: 16px;
+        line-height: 1.62;
+    }
+}
+
+// Слайдер
+.slider__pagination {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+
+    // планшет
+    @media screen and (min-width: 768px) {
+        right: 39px;    
+    }
+
+    // пк
+    @media screen and (min-width: 1200px) {
+        right: 55px;    
+    }
+}
+
+.slider__item {
+    margin-left: auto;
+    margin-bottom: 12px;
+    
+    width: 8px;
+    height: 2px;
+    
+    background-color: getColor('secondary');
+
+    // активний слайд
+    &--active {
+        width: 18px;
+        background-color: getColor('white');
+    }
+}
+
+// Кнопки перемикання слайдів
+.slider__controls {
+    position: absolute;
+    bottom: 40px;
+    right: 55px;
+
+    display: flex;
+
+    // телефон
+    @media screen and (max-width: 767.5px) {
+        display: none;
+    }
+
+    // планшет
+    @media screen and (min-width: 768px) and (max-width: 1199.5px){
+        right: 39px;
+    }
+}
+
+.slider__item-control:nth-child(n+2) {
+    margin-left: 26px;
+}
+
+.slider__btn {
+    padding-bottom: 8px;
+    padding-left: 0;
+    padding-right: 0;
+
+    min-width: 60px;
+
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+
+    color: getColor('secondary-light');
+    background-color: transparent;
+
+    border: none;
+    border-bottom: 1px solid getColor('secondary-light');
+
+    cursor: pointer;
+    transition: 
+        color $animation,
+        border-color $animation;
+
+    // вид кнопок
+    &--prev {
+        text-align: start;
+    }
+    &--next {
+        text-align: end;
+    }
+
+    // ховер та фокус
+    &:hover,
+    &:focus {
+        color: getColor('accent');
+        border-color: getColor('accent');
+        outline: transparent;
+    }
+
+    // активна кнопка
+    &--active {
+        color: getColor('white');
+        border-color: getColor('white');
+    }
+}

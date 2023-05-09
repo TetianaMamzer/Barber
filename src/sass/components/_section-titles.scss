@@ -1,0 +1,75 @@
+// Надзаголовок роздіу
+.uppertitle {
+    display: flex;
+    align-items: center;
+    
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    // на темному фоні
+    &--dark-mode {
+        color: getColor('secondary-light');
+    }
+
+    // на світлому фоні
+    &--light-mode {
+        color: getColor('title');
+    }
+
+    // лінія
+    &::before {
+        content: "";
+        display: inline-block;
+        margin-right: 20px;
+
+        width: 60px;
+        height: 1px;
+
+        background-color: currentColor;
+    }
+}
+
+// Головний заголовок розділу
+.title {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-family: 'Raleway';
+    font-size: 42px;
+    line-height: 1.16;
+    letter-spacing: 0.05em;
+
+    // на темному фоні
+    &--dark-mode {
+        color: getColor('white');
+    }
+
+    // на світлому фоні
+    &--light-mode {
+        color: getColor('title');
+    }
+}
+
+// Підзаголовок розділу
+.subtitle {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    max-width: 470px;
+
+    font-size: 18px;
+    line-height: 1.66;
+    letter-spacing: 0.02em;
+    text-align: start;
+
+    // на темному фоні
+    &--dark-mode {
+        color: getColor('secondary-light');
+    }
+}

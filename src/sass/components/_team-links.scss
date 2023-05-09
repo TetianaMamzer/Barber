@@ -1,0 +1,44 @@
+// Соціальні мережі члена команди
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.social__item:nth-child(n+2) {
+    margin-left: 10px;
+}
+
+.social__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 44px;
+    height: 44px;
+
+    color: getColor('title');
+
+    border-radius: 50%;
+    outline: transparent;
+    transition: 
+        background-color 0.2s ease-in, 
+        color 0.2s ease-in, 
+        transform 0.4s ease-in;
+
+    // Ховер та фокус
+    &:hover,
+    &:focus {
+        color: getColor('accent');
+        background-color: #22283E;
+        transform: scale(1.1);
+    }
+}
+
+// Іконки соціальних мереж
+.social__icon {
+    max-width: 20px;
+    max-height: 20px;
+
+    fill: currentColor;
+    transition: fill $animation;
+}

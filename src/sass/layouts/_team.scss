@@ -1,0 +1,63 @@
+// Розділ команда
+.team {
+    background-color: #F7F7F7;
+}
+
+.team__title {
+    margin-bottom: 44px;
+}
+
+// Список нашої команди
+.team__list {
+    justify-content: space-between;
+
+    // планшет
+    @media screen and (min-width: 768px) and (max-width: 1199.5px) {
+        justify-content: center;
+    }
+}
+
+.team__item {
+    @include size-Cards(1);
+
+    // планшет
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - (270px * 1)) / 1);
+    }
+
+    // пк
+    @media screen and (min-width: 1200px) {
+        @include size-Cards(3);
+    }
+}
+
+// Опис члена команди
+.team__article {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    text-align: center;
+}
+
+.team__subtitle {
+    margin-top: 0;
+    margin-bottom: 8px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.38;
+    letter-spacing: 0.02em;
+
+    color: getColor('title');
+}
+
+.team__desc {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-size: 14px;
+    line-height: 1.35;
+    letter-spacing: 0.02em;
+
+    color: getColor('accent');
+}

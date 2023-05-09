@@ -1,14 +1,1099 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
-  </head>
-  <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
-  </body>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberShop</title>
+
+    <!-- Шрифти -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- Анімація -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Нормалізатор -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
+
+    <!-- Стилі -->
+    <link rel="stylesheet" href="./css/main.min.css">
+
+</head>
+
+<body class="page-body">
+
+    <!-- Шапка сайту -->
+    <header class="page-header " data-header data-aos="fade-down" data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000">
+        <div class="container page-header__container">
+
+            <!-- Логотип -->
+            <a href="./index.html" aria-label="Логотип сайту BarberShop">
+                <svg width="69" height="56">
+                    <use class="logo " href="./img/sprits/sprit.svg#icon-logo" data-logo></use>
+                </svg>
+            </a>
+
+
+            <!-- Навігація по сайту -->
+            <nav class="main-nav page-header__main-nav">
+
+                <!-- Гамбургер -->
+                <button class="main-nav__button" type="button" aria-controls="menu-container" aria-expanded="false"
+                    data-menu-button>
+                    <svg width="34" height="29" aria-label="Перемикач мобільного меню">
+                        <use class="icon-cross" href="./img/sprits/sprit.svg#icon-exit"></use>
+                        <use class="icon-menu" href="./img/sprits/sprit.svg#icon-menu"></use>
+                    </svg>
+                </button>
+
+                <!-- Бекдроп -->
+                <div class="main-nav__backdrop" data-menu></div>
+
+                <!-- Випливаюче меню -->
+                <div class="main-nav__wrapper" id="menu-container">
+
+                    <!-- Компоненти меню -->
+                    <ul class="main-nav__list list">
+
+                        <li class="main-nav__item">
+                            <a class="main-nav__link link" href="#about">Про нас</a>
+                        </li>
+
+                        <li class="main-nav__item">
+                            <a class="main-nav__link link" href="#price">Послуги та ціни</a>
+                        </li>
+
+                        <li class="main-nav__item">
+                            <a class="main-nav__link link" href="#team">Майстри</a>
+                        </li>
+
+                        <li class="main-nav__item">
+                            <a class="main-nav__link link" href="#contact">Контакти</a>
+                        </li>
+                    </ul>
+
+                    <!-- Замовити стрижку -->
+                    <div class="main-nav__group">
+                        <a class="phone-link link" href="tel:+380441111111" target="_blank" rel="noreferrer noopener"
+                            aria-label="Номер телефону">+38 044 111 11 11</a>
+                        <button class="btn btn--page-header btn--anim-pulse" type="button"
+                            data-modal-open>онлайн-запис</button>
+                    </div>
+
+
+                </div>
+
+            </nav>
+
+
+        </div>
+    </header>
+
+    <!-- Секція main -->
+    <main>
+
+        <!-- Розділ Герой -->
+        <section class="hero">
+            <div class="container hero__container">
+
+                <!-- Соціальні мережі -->
+                <div class="hero__left-side" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000" data-aos-delay="200">
+
+                    <ul class="social-links-list hero__social-links-list list">
+
+                        <li>
+                            <a class="social-links-list__link link" href="https://www.instagram.com/" target="_blank"
+                                rel="noopener noreferrer" aria-label="instagram">Instagram</a>
+                        </li>
+                        <li>
+                            <a class="social-links-list__link link" href="htts://www.youtube.com" target="_blank"
+                                rel="noopener noreferrer" aria-label="youtube">Youtube</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- Оффер -->
+                <div class="hero__group">
+                    <p class="uppertitle uppertitle--dark-mode" lang="en" data-aos="fade-left"
+                        data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="300">A hair salon for
+                        men in Kyiv</p>
+
+                    <h1 class="main-title" lang="en" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000" data-aos-delay="400">BarberShop</h1>
+
+                    <p class="subtitle subtitle--dark-mode subtitle--hero-mb" data-aos="fade-right"
+                        data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="500">
+                        Ми експерти у модних чоловічих стрижках.
+                        Працюємо швидко, обережно та зі смаком.
+                    </p>
+                </div>
+
+                <!-- Слайдер -->
+                <div class="slider">
+                    <ul class="slider__pagination list" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000" data-aos-delay="300">
+                        <li class="slider__item slider__item--active"></li>
+                        <li class="slider__item"></li>
+                        <li class="slider__item"></li>
+                    </ul>
+
+                    <!-- Кнопки перемикання слайдів -->
+                    <ul class="slider__controls list" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000" data-aos-delay="300">
+                        <li class="slider__item-control">
+                            <button class="slider__btn slider__btn--prev " type="button">Назад</button>
+                        </li>
+                        <li class="slider__item-control">
+                            <button class="slider__btn slider__btn--next slider__btn--active"
+                                type="button">Вперед</button>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Розділ про нас -->
+        <section class="section about" id="about">
+            <div class="container about__container">
+
+                <!-- Фотографії -->
+                <ul class="photos grid list">
+                    <li class="photos__item grid__item" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000" data-aos-delay="100">
+                        <picture>
+                            <!-- розширення webp -->
+                            <source srcset="
+                                        ./img/about/pc/WebP/img1.webp 270w,
+                                        ./img/about/pc/WebP/img1-2x.webp 540w" sizes="(min-width: 1200px) 270px"
+                                type="image/webp" media="(min-width: 1200px)" />
+                            <source srcset="
+                                        ./img/about/tablet/WebP/img1.webp 330w,
+                                        ./img/about/tablet/WebP/img1-2x.webp 660w" sizes="(min-width: 768px) 330px"
+                                type="image/webp" media="(min-width: 768px)" />
+
+                            <!-- розширення jpeg -->
+                            <source srcset="
+                                        ./img/about/pc/img1.jpg 270w, 
+                                        ./img/about/pc/img1-2x.jpg 540w" sizes="(min-width: 1200px) 270px"
+                                type="image/jpeg" media="(min-width: 1200px)" />
+                            <source srcset="
+                                        ./img/about/tablet/img1.jpg 330w,
+                                        ./img/about/tablet/img1-2x.jpg 660w" sizes="(min-width: 768px) 330px"
+                                type="image/jpeg" media="(min-width: 768px)" />
+
+                            <img class="img" src="./img/about/tablet/img1.jpg" alt="Гоління бороди" />
+                        </picture>
+
+                    </li>
+
+                    <li class="photos__item grid__item" data-aos="fade-down" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000" data-aos-delay="200">
+                        <picture>
+                            <!-- розширення webp -->
+                            <source srcset="
+                                        ./img/about/pc/WebP/img2.webp 270w,
+                                        ./img/about/pc/WebP/img2-2x.webp 540w" sizes="(min-width: 1200px) 270px"
+                                type="image/webp" media="(min-width: 1200px)" />
+                            <source srcset="
+                                        ./img/about/tablet/WebP/img2.webp 330w,
+                                        ./img/about/tablet/WebP/img2-2x.webp 660w" sizes="(min-width: 768px) 330px"
+                                type="image/webp" media="(min-width: 768px)" />
+
+                            <!-- розширення jpeg -->
+                            <source srcset="
+                                        ./img/about/pc/img2.jpg 270w, 
+                                        ./img/about/pc/img2-2x.jpg 540w" sizes="(min-width: 1200px) 270px"
+                                type="image/jpeg" media="(min-width: 1200px)" />
+                            <source srcset="
+                                        ./img/about/tablet/img2.jpg 330w,
+                                        ./img/about/tablet/img2-2x.jpg 660w" sizes="(min-width: 768px) 330px"
+                                type="image/jpeg" media="(min-width: 768px)" />
+
+                            <img class="img" src="./img/about/tablet/img2.jpg" alt="Гоління небезпечною бритвою" />
+                        </picture>
+
+                    </li>
+                </ul>
+
+                <!-- Опис -->
+                <div class="about__description-group">
+                    <p class="uppertitle uppertitle--light-mode" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000" data-aos-delay="100">ПРО НАС</p>
+
+                    <!-- Заголовок розділів -->
+                    <h2 class="title title--about-mb title--light-mode" data-aos="fade-left"
+                        data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="200">
+                        Кращий Барбершоп твого міста
+                    </h2>
+                    <p class="subtitle subtitle--about-mb" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000" data-aos-delay="300">
+                        Якщо ти хочеш додати у свій образ більше впевненості, тобі точно до нас.
+                    </p>
+                    <p class="description-txt" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000" data-aos-delay="400">
+                        Ми команда, яка ніколи не зупиняється на досягнутому
+                        і прагне змін. І коли ти потрапиш до рук нашого майстра,
+                        то вже ніколи не зможеш бути тим самим. Ми команда, яка завжди з клієнтами "на одній хвилі".
+                        Тому ми завжди
+                        готові вдосконалити кожного, хто до нас приходить!
+                    </p>
+                    <button class="btn btn--light-mode" type="button" data-aos="fade-left"
+                        data-aos-easing="ease-out-cubic" data-aos-duration="1000"
+                        data-aos-delay="500">онлайн-запис</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Розділ послуги т ціни -->
+        <section class="section price" id="price">
+            <div class="container">
+                <p class="uppertitle uppertitle--dark-mode" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000" data-aos-delay="100">Проведи час у компанії кращих майстрів</p>
+
+                <!-- Заголовок розділів -->
+                <h2 class="title title--dark-mode" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000" data-aos-delay="200">Послуги та ціни</h2>
+
+                <!-- Таблиці цін -->
+                <ul class="price-list list">
+
+                    <li class="price-list__item" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000" data-aos-delay="400">
+
+                        <!-- Блок цін -->
+                        <ul class="price-inner list">
+                            <li class="price-inner__item">
+                                <span class="price-inner__desc">Чоловіча стрижка</span>
+                                <span>від 300 грн.</span>
+                            </li>
+                            <li class="price-inner__item">
+                                <span class="price-inner__desc">Стрижка бороди</span>
+                                <span>від 200 грн.</span>
+                            </li>
+                            <li class="price-inner__item">
+                                <span class="price-inner__desc">Стрижка вусів</span>
+                                <span>від 200 грн.</span>
+                            </li>
+                            <li class="price-inner__item">
+                                <span class="price-inner__desc">Гоління небезпечною бритвою</span>
+                                <span>від 200 грн.</span>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="price-list__item" data-aos="fade-down" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000" data-aos-delay="500">
+
+                        <!-- Блок цін -->
+                        <ul class="price-inner list">
+                            <li class="price-inner__item">
+                                <span class="price-inner__desc">Стрижка у стажера</span>
+                                <span>від 50 грн</span> .
+                            </li>
+                            <li class="price-inner__item">
+                                <span class="price-inner__desc">Стрижка під насадку</span>
+                                <span>від 200 грн.</span>
+                            </li>
+                            <li class="price-inner__item">
+                                <span class="price-inner__desc">Дитяча стрижка (до 12 років)</span>
+                                <span>від 300 грн.</span>
+                            </li>
+                            <li class="price-inner__item">
+                                <span class="price-inner__desc">Камуфлювання сивини</span>
+                                <span>від 200 грн.</span>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <!-- Кнопка -->
+                <div class="price__wrapper" data-aos="fade-down" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000" data-aos-delay="500">
+                    <button class="btn btn--dark-mode" type="button">онлайн-запис</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Розділ переваги -->
+        <section class="section benefits">
+            <div class="container benefits__container">
+
+                <!-- Ліва частина -->
+                <div class="benefits__left-side">
+                    <ul class="benefits__list list">
+                        <div>
+                            <li class="benefits__item" data-aos="zoom-out" data-aos-easing=" ease-out-cubic"
+                                data-aos-duration="1000" data-aos-delay="100">
+                                <p class="benefits__amount">
+                                    600
+                                    <sup class="benefits__decor">&#43;</sup>
+                                </p>
+                                <p class="benefits__desc">Задоволених клієнтів на день</p>
+                            </li>
+
+                            <li class="benefits__item" data-aos="zoom-out" data-aos-easing=" ease-out-cubic"
+                                data-aos-duration="1000" data-aos-delay="200">
+                                <p class="benefits__amount">
+                                    50
+                                    <sup class="benefits__decor">&#43;</sup>
+                                </p>
+                                <p class="benefits__desc">Нагород за відмінний сервіс</p>
+                            </li>
+                        </div>
+
+                        <div class="benefits__wrapper">
+                            <li class="benefits__item" data-aos="zoom-out" data-aos-easing=" ease-out-cubic"
+                                data-aos-duration="1000" data-aos-delay="300">
+                                <p class="benefits__amount">
+                                    20
+                                    <sup class="benefits__decor">&#43;</sup>
+                                </p>
+                                <p class="benefits__desc">Найкращих майстрів Києва</p>
+                            </li>
+
+                            <li class="benefits__item" data-aos="zoom-out" data-aos-easing=" ease-out-cubic"
+                                data-aos-duration="1000" data-aos-delay="400">
+                                <p class="benefits__amount">
+                                    100
+                                    <sup class="benefits__decor">&#43;</sup>
+                                </p>
+                                <p class="benefits__desc">Подарунків постійним клієнтам</p>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+
+                <!-- Права чатстина -->
+                <div class="benefits__right-side">
+                    <p class="uppertitle uppertitle--light-mode" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000" data-aos-delay="500">стара традиційна школа</p>
+
+                    <!-- Заголовок розділів -->
+                    <h2 class="title title--light-mode" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000" data-aos-delay="600">Чому приходять саме до нас?</h2>
+                    <p class="subtitle" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000"
+                        data-aos-delay="700">
+                        Про нас говорять лише добре. Але краще 1 раз побачити та відчути,
+                        ніж 10 разів прочитати.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Розділ команда -->
+        <section class="section team" id="team">
+
+            <div class="container">
+                <p class="uppertitle uppertitle--light-mode" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000" data-aos-delay="100">для справжніх поціновувачів атмосфери</p>
+
+                <!-- Заголовок розділів -->
+                <h2 class="title team__title title--light-mode" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000" data-aos-delay="200">Наші майстри</h2>
+
+                <!-- Список нашої команди -->
+                <ul class="grid team__list list">
+
+                    <li class="grid__item team__item" data-aos="zoom-in-up" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000" data-aos-delay="300">
+
+                        <!-- Фото -->
+                        <picture>
+                            <!-- розширення webp -->
+                            <source srcset="
+                                        ./img/team/pc/WebP/img1.webp 370w,
+                                        ./img/team/pc/WebP/img1-2x.webp 740w" sizes="(min-width: 1200px) 33vw"
+                                type="image/webp" media="(min-width: 1200px)" />
+                            <source srcset="
+                                        ./img/team/tablet/WebP/img1.webp 450w,
+                                        ./img/team/tablet/WebP/img1-2x.webp 900w" sizes="(min-width: 768px) 50vw"
+                                type="image/webp" media="(min-width: 768px)" />
+                            <source srcset="
+                                        ./img/team/mobile/WebP/img1.webp 418w,
+                                        ./img/team/mobile/WebP/img1-2x.webp 836w" sizes="100vw" type="image/webp"
+                                media="(max-width: 767px)" />
+
+                            <!-- розширення jpeg -->
+                            <source srcset="
+                                        ./img/team/pc/img1.jpg 370w,
+                                        ./img/team/pc/img1-2x.jpg 740w" sizes="(min-width: 1200px) 33vw"
+                                type="image/jpeg" media="(min-width: 1200px)" />
+                            <source srcset="
+                                        ./img/team/tablet/img1.jpg 450w,
+                                        ./img/team/tablet/img1-2x.jpg 900w" sizes="(min-width: 768px) 50vw"
+                                type="image/jpeg" media="(min-width: 768px)" />
+                            <source srcset="
+                                        ./img/team/mobile/img1.jpg 418w,
+                                        ./img/team/mobile/img1-2x.jpg 836w" sizes="100vw" type="image/jpeg"
+                                media="(max-width: 767px)" />
+
+                            <img class="img" src="./img/team/mobile/img1.jpg" alt="John Smith - Extreme Barber" />
+                        </picture>
+
+                        <!-- Опис члена команди -->
+                        <div class="team__article">
+                            <h3 class="team__subtitle" lang="en">John Smith</h3>
+                            <p class="team__desc" lang="en">Extreme Barber</p>
+                        </div>
+
+                        <!-- Соціальні мережі члена команди -->
+                        <ul class="social list">
+
+
+                            <li class="social__item">
+                                <a class="social__link link" href="https://www.instagram.com/" target="_blank"
+                                    rel="noopener noreferrer" aria-label="instagram">
+                                    <svg class="social__icon">
+                                        <use href="./img/sprits/sprit.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                            <li class="social__item">
+                                <a class="social__link link" href="https://twitter.com/?lang=uk" target="_blank"
+                                    rel="noopener noreferrer" aria-label="twitter">
+                                    <svg class="social__icon">
+                                        <use href="./img/sprits/sprit.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                            <li class="social__item">
+                                <a class="social__link link" href="https://www.facebook.com/" target="_blank"
+                                    rel="noopener noreferrer" aria-label="facebook">
+                                    <svg class="social__icon">
+                                        <use href="./img/sprits/sprit.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                            <li class="social__item">
+                                <a class="social__link link" href="https://www.linkedin.com/" target="_blank"
+                                    rel="noopener noreferrer" aria-label="linkedin">
+                                    <svg class="social__icon">
+                                        <use href="./img/sprits/sprit.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="grid__item team__item" data-aos="zoom-in-up" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000" data-aos-delay="400">
+
+                        <!-- Фото -->
+                        <picture>
+                            <!-- розширення webp -->
+                            <source srcset="
+                                        ./img/team/pc/WebP/img2.webp 370w,
+                                        ./img/team/pc/WebP/img2-2x.webp 740w" sizes="(min-width: 1200px) 33vw"
+                                type="image/webp" media="(min-width: 1200px)" />
+                            <source srcset="
+                                        ./img/team/tablet/WebP/img2.webp 450w,
+                                        ./img/team/tablet/WebP/img2-2x.webp 900w" sizes="(min-width: 768px) 50vw"
+                                type="image/webp" media="(min-width: 768px)" />
+                            <source srcset="
+                                        ./img/team/mobile/WebP/img2.webp 418w,
+                                        ./img/team/mobile/WebP/img2-2x.webp 836w" sizes="100vw" type="image/webp"
+                                media="(max-width: 767px)" />
+
+                            <!-- розширення jpeg -->
+                            <source srcset="
+                                        ./img/team/pc/img2.jpg 370w,
+                                        ./img/team/pc/img2-2x.jpg 740w" sizes="(min-width: 1200px) 33vw"
+                                type="image/jpeg" media="(min-width: 1200px)" />
+                            <source srcset="
+                                        ./img/team/tablet/img2.jpg 450w,
+                                        ./img/team/tablet/img2-2x.jpg 900w" sizes="(min-width: 768px) 50vw"
+                                type="image/jpeg" media="(min-width: 768px)" />
+                            <source srcset="
+                                        ./img/team/mobile/img2.jpg 418w,
+                                        ./img/team/mobile/img2-2x.jpg 836w" sizes="100vw" type="image/jpeg"
+                                media="(max-width: 767px)" />
+
+                            <img class="img" src="./img/team/mobile/img2.jpg" alt="Michele Doe - Extreme Barber" />
+                        </picture>
+
+                        <!-- Опис члена команди -->
+                        <div class="team__article">
+                            <h3 class="team__subtitle" lang="en">Michele Doe</h3>
+                            <p class="team__desc" lang="en">Extreme Barber</p>
+                        </div>
+
+                        <!-- Соціальні мережі члена команди -->
+                        <ul class="social list">
+
+
+                            <li class="social__item">
+                                <a class="social__link link" href="https://www.instagram.com/" target="_blank"
+                                    rel="noopener noreferrer" aria-label="instagram">
+                                    <svg class="social__icon">
+                                        <use href="./img/sprits/sprit.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                            <li class="social__item">
+                                <a class="social__link link" href="https://twitter.com/?lang=uk" target="_blank"
+                                    rel="noopener noreferrer" aria-label="twitter">
+                                    <svg class="social__icon">
+                                        <use href="./img/sprits/sprit.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                            <li class="social__item">
+                                <a class="social__link link" href="https://www.facebook.com/" target="_blank"
+                                    rel="noopener noreferrer" aria-label="facebook">
+                                    <svg class="social__icon">
+                                        <use href="./img/sprits/sprit.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                            <li class="social__item">
+                                <a class="social__link link" href="https://www.linkedin.com/" target="_blank"
+                                    rel="noopener noreferrer" aria-label="linkedin">
+                                    <svg class="social__icon">
+                                        <use href="./img/sprits/sprit.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="grid__item team__item" data-aos="zoom-in-up" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000" data-aos-delay="500">
+
+                        <!-- Фото -->
+                        <picture>
+                            <!-- розширення webp -->
+                            <source srcset="
+                                        ./img/team/pc/WebP/img3.webp 370w,
+                                        ./img/team/pc/WebP/img3-2x.webp 740w" sizes="(min-width: 1200px) 33vw"
+                                type="image/webp" media="(min-width: 1200px)" />
+                            <source srcset="
+                                        ./img/team/tablet/WebP/img3.webp 450w,
+                                        ./img/team/tablet/WebP/img3-2x.webp 900w" sizes="(min-width: 768px) 50vw"
+                                type="image/webp" media="(min-width: 768px)" />
+                            <source srcset="
+                                        ./img/team/mobile/WebP/img3.webp 418w,
+                                        ./img/team/mobile/WebP/img3-2x.webp 836w" sizes="100vw" type="image/webp"
+                                media="(max-width: 767px)" />
+
+                            <!-- розширення jpeg -->
+                            <source srcset="
+                                        ./img/team/pc/img3.jpg 370w,
+                                        ./img/team/pc/img3-2x.jpg 740w" sizes="(min-width: 1200px) 33vw"
+                                type="image/jpeg" media="(min-width: 1200px)" />
+                            <source srcset="
+                                        ./img/team/tablet/img3.jpg 450w,
+                                        ./img/team/tablet/img3-2x.jpg 900w" sizes="(min-width: 768px) 50vw"
+                                type="image/jpeg" media="(min-width: 768px)" />
+                            <source srcset="
+                                        ./img/team/mobile/img3.jpg 418w,
+                                        ./img/team/mobile/img3-2x.jpg 836w" sizes="100vw" type="image/jpeg"
+                                media="(max-width: 767px)" />
+
+                            <img class="img" src="./img/team/mobile/img2.jpg" alt="Alan Black - Extreme Barber" />
+                        </picture>
+
+                        <!-- Опис члена команди -->
+                        <div class="team__article">
+                            <h3 class="team__subtitle" lang="en">Alan Black</h3>
+                            <p class="team__desc" lang="en">Extreme Barber</p>
+                        </div>
+
+                        <!-- Соціальні мережі члена команди -->
+                        <ul class="social list">
+
+
+                            <li class="social__item">
+                                <a class="social__link link" href="https://www.instagram.com/" target="_blank"
+                                    rel="noopener noreferrer" aria-label="instagram">
+                                    <svg class="social__icon">
+                                        <use href="./img/sprits/sprit.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                            <li class="social__item">
+                                <a class="social__link link" href="https://twitter.com/?lang=uk" target="_blank"
+                                    rel="noopener noreferrer" aria-label="twitter">
+                                    <svg class="social__icon">
+                                        <use href="./img/sprits/sprit.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                            <li class="social__item">
+                                <a class="social__link link" href="https://www.facebook.com/" target="_blank"
+                                    rel="noopener noreferrer" aria-label="facebook">
+                                    <svg class="social__icon">
+                                        <use href="./img/sprits/sprit.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                            <li class="social__item">
+                                <a class="social__link link" href="https://www.linkedin.com/" target="_blank"
+                                    rel="noopener noreferrer" aria-label="linkedin">
+                                    <svg class="social__icon">
+                                        <use href="./img/sprits/sprit.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+        <!-- Розділ портфоліо -->
+        <section class="section portfolio">
+
+            <div class="container">
+                <p class="uppertitle uppertitle--light-mode portfolio__uppertitle" data-aos="fade-left"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="100">Латинською мовою
+                    "барба" означає
+                    "борода"</p>
+
+                <!-- Заголовок розділів -->
+                <h2 hidden>Приклади робіт</h2>
+
+                <!-- Список робіт -->
+                <ul class="grid list">
+                    <li class="grid__item portfolio__item" data-aos="flip-down" data-aos-easing="ease-out-cubic"
+                        data-aos-delay="200">
+
+                        <!-- Фото -->
+                        <picture>
+                            <!-- розширення webp -->
+                            <source srcset="
+                                        ./img/portfolio/pc/WebP/img1.webp 370w,
+                                        ./img/portfolio/pc/WebP/img1-2x.webp 740w" sizes="(min-width: 1200px) 33vw"
+                                type="image/webp" media="(min-width: 1200px)" />
+                            <source srcset="
+                                        ./img/portfolio/tablet/WebP/img1.webp 450w,
+                                        ./img/portfolio/tablet/WebP/img1-2x.webp 900w" sizes="(min-width: 768px) 50vw"
+                                type="image/webp" media="(min-width: 768px)" />
+                            <source srcset="
+                                        ./img/portfolio/mobile/WebP/img1.webp 418w,
+                                        ./img/portfolio/mobile/WebP/img1-2x.webp 836w" sizes="100vw" type="image/webp"
+                                media="(max-width: 767px)" />
+
+                            <!-- розширення jpeg -->
+                            <source srcset="
+                                        ./img/portfolio/pc/img1.jpg 370w,
+                                        ./img/portfolio/pc/img1-2x.jpg 740w" sizes="(min-width: 1200px) 33vw"
+                                type="image/jpeg" media="(min-width: 1200px)" />
+                            <source srcset="
+                                        ./img/portfolio/tablet/img1.jpg 450w,
+                                        ./img/portfolio/tablet/img1-2x.jpg 900w" sizes="(min-width: 768px) 50vw"
+                                type="image/jpeg" media="(min-width: 768px)" />
+                            <source srcset="
+                                        ./img/portfolio/mobile/img1.jpg 418w,
+                                        ./img/portfolio/mobile/img1-2x.jpg 836w" sizes="100vw" type="image/jpeg"
+                                media="(max-width: 767px)" />
+
+                            <img class="img" src="./img/team/mobile/img1.jpg" alt="Приклад роботи 1" />
+                        </picture>
+                    </li>
+
+                    <li class="grid__item portfolio__item" data-aos="flip-up" data-aos-easing="ease-out-cubic"
+                        data-aos-delay="300">
+
+                        <!-- Фото -->
+                        <picture>
+                            <!-- розширення webp -->
+                            <source srcset="
+                                        ./img/portfolio/pc/WebP/img2.webp 370w,
+                                        ./img/portfolio/pc/WebP/img2-2x.webp 740w" sizes="(min-width: 1200px) 33vw"
+                                type="image/webp" media="(min-width: 1200px)" />
+                            <source srcset="
+                                        ./img/portfolio/tablet/WebP/img2.webp 450w,
+                                        ./img/portfolio/tablet/WebP/img2-2x.webp 900w" sizes="(min-width: 768px) 50vw"
+                                type="image/webp" media="(min-width: 768px)" />
+                            <source srcset="
+                                        ./img/portfolio/mobile/WebP/img2.webp 418w,
+                                        ./img/portfolio/mobile/WebP/img2-2x.webp 836w" sizes="100vw" type="image/webp"
+                                media="(max-width: 767px)" />
+
+                            <!-- розширення jpeg -->
+                            <source srcset="
+                                        ./img/portfolio/pc/img2.jpg 370w,
+                                        ./img/portfolio/pc/img2-2x.jpg 740w" sizes="(min-width: 1200px) 33vw"
+                                type="image/jpeg" media="(min-width: 1200px)" />
+                            <source srcset="
+                                        ./img/portfolio/tablet/img2.jpg 450w,
+                                        ./img/portfolio/tablet/img2-2x.jpg 900w" sizes="(min-width: 768px) 50vw"
+                                type="image/jpeg" media="(min-width: 768px)" />
+                            <source srcset="
+                                        ./img/portfolio/mobile/img2.jpg 418w,
+                                        ./img/portfolio/mobile/img2-2x.jpg 836w" sizes="100vw" type="image/jpeg"
+                                media="(max-width: 767px)" />
+
+                            <img class="img" src="./img/team/mobile/img2.jpg" alt="Приклад роботи 2" />
+                        </picture>
+                    </li>
+
+                    <li class="grid__item portfolio__item" data-aos="flip-down" data-aos-easing="ease-out-cubic"
+                        data-aos-delay="400">
+
+                        <!-- Фото -->
+                        <picture>
+                            <!-- розширення webp -->
+                            <source srcset="
+                                        ./img/portfolio/pc/WebP/img3.webp 370w,
+                                        ./img/portfolio/pc/WebP/img3-2x.webp 740w" sizes="(min-width: 1200px) 33vw"
+                                type="image/webp" media="(min-width: 1200px)" />
+                            <source srcset="
+                                        ./img/portfolio/tablet/WebP/img3.webp 450w,
+                                        ./img/portfolio/tablet/WebP/img3-2x.webp 900w" sizes="(min-width: 768px) 50vw"
+                                type="image/webp" media="(min-width: 768px)" />
+                            <source srcset="
+                                        ./img/portfolio/mobile/WebP/img3.webp 418w,
+                                        ./img/portfolio/mobile/WebP/img3-2x.webp 836w" sizes="100vw" type="image/webp"
+                                media="(max-width: 767px)" />
+
+                            <!-- розширення jpeg -->
+                            <source srcset="
+                                        ./img/portfolio/pc/img3.jpg 370w,
+                                        ./img/portfolio/pc/img3-2x.jpg 740w" sizes="(min-width: 1200px) 33vw"
+                                type="image/jpeg" media="(min-width: 1200px)" />
+                            <source srcset="
+                                        ./img/portfolio/tablet/img3.jpg 450w,
+                                        ./img/portfolio/tablet/img3-2x.jpg 900w" sizes="(min-width: 768px) 50vw"
+                                type="image/jpeg" media="(min-width: 768px)" />
+                            <source srcset="
+                                        ./img/portfolio/mobile/img3.jpg 418w,
+                                        ./img/portfolio/mobile/img3-2x.jpg 836w" sizes="100vw" type="image/jpeg"
+                                media="(max-width: 767px)" />
+
+                            <img class="img" src="./img/team/mobile/img3.jpg" alt="Приклад роботи 3" />
+                        </picture>
+                    </li>
+
+                    <li class="grid__item portfolio__item" data-aos="flip-up" data-aos-easing="ease-out-cubic"
+                        data-aos-delay="500">
+
+                        <!-- Фото -->
+                        <picture>
+                            <!-- розширення webp -->
+                            <source srcset="
+                                        ./img/portfolio/pc/WebP/img4.webp 370w,
+                                        ./img/portfolio/pc/WebP/img4-2x.webp 740w" sizes="(min-width: 1200px) 33vw"
+                                type="image/webp" media="(min-width: 1200px)" />
+                            <source srcset="
+                                        ./img/portfolio/tablet/WebP/img4.webp 450w,
+                                        ./img/portfolio/tablet/WebP/img4-2x.webp 900w" sizes="(min-width: 768px) 50vw"
+                                type="image/webp" media="(min-width: 768px)" />
+                            <source srcset="
+                                        ./img/portfolio/mobile/WebP/img4.webp 418w,
+                                        ./img/portfolio/mobile/WebP/img4-2x.webp 836w" sizes="100vw" type="image/webp"
+                                media="(max-width: 767px)" />
+
+                            <!-- розширення jpeg -->
+                            <source srcset="
+                                        ./img/portfolio/pc/img4.jpg 370w,
+                                        ./img/portfolio/pc/img4-2x.jpg 740w" sizes="(min-width: 1200px) 33vw"
+                                type="image/jpeg" media="(min-width: 1200px)" />
+                            <source srcset="
+                                        ./img/portfolio/tablet/img4.jpg 450w,
+                                        ./img/portfolio/tablet/img4-2x.jpg 900w" sizes="(min-width: 768px) 50vw"
+                                type="image/jpeg" media="(min-width: 768px)" />
+                            <source srcset="
+                                        ./img/portfolio/mobile/img4.jpg 418w,
+                                        ./img/portfolio/mobile/img4-2x.jpg 836w" sizes="100vw" type="image/jpeg"
+                                media="(max-width: 767px)" />
+
+                            <img class="img" src="./img/team/mobile/img4.jpg" alt="Приклад роботи 4" />
+                        </picture>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+        <!-- Розділ контакти -->
+        <section class="section contact" id="contact">
+
+            <div class="container contact__container">
+
+                <!-- Форма запису на послугу -->
+                <div class="contact__left-side">
+                    <h2 class="title contact__title" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000" data-aos-delay="100">Онлайн-запис</h2>
+
+                    <form class="form">
+
+                        <!-- Дані замовника -->
+                        <div class="form__wrapper">
+                            <label class="form__group" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                                data-aos-duration="1000" data-aos-delay="200">
+                                <input class="form__input placeholder" type="text" name="user-name"
+                                    placeholder="Jon Snow" minlength="3" required>
+
+                                <!-- Підпис -->
+                                <span class="form__label">Ім'я<span class="decor"> *</span></span>
+
+                                <!-- Підказки -->
+                                <span class="form__txt-error txt-error">Мінімальна довжина 3 символи</span>
+                                <svg class="form__icons-error" width="15" height="15">
+                                    <use class="icon-attention" href="./img/sprits/sprit.svg#icon-attention">
+                                    </use>
+                                    <use class="icon-success" href="./img/sprits/sprit.svg#icon-success"></use>
+                                </svg>
+                            </label>
+
+                            <label class="form__group" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                                data-aos-duration="1000" data-aos-delay="300">
+                                <input class="form__input placeholder" type="text" name="user-phone"
+                                    placeholder="+38 (099) 123-45-67" required>
+
+                                <!-- Підпис -->
+                                <span class="form__label">Телефон<span class="decor"> *</span></span>
+
+                                <!-- Підказки -->
+                                <span class="form__txt-error txt-error">Введіть телефон у вказаному форматі</span>
+                                <svg class="form__icons-error" width="15" height="15">
+                                    <use class="icon-attention" href="./img/sprits/sprit.svg#icon-attention">
+                                    </use>
+                                    <use class="icon-success" href="./img/sprits/sprit.svg#icon-success"></use>
+                                </svg>
+                            </label>
+                        </div>
+
+                        <!-- Повідомлення -->
+                        <label class="form__message-group" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000" data-aos-delay="400">
+
+                            <textarea class="form__message placeholder" name="user-messag" rows="5"
+                                placeholder="Введіть повідомлення"></textarea>
+                            <span class="form__message-label">Повідомлення</span>
+                        </label>
+
+                        <div class="form__btn-wrapper" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000" data-aos-delay="500">
+                            <button class="btn btn--dark-mode" type="button">Надіслати</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Контакти сайту -->
+                <div class="contact__right-side">
+                    <h2 class="title contact__title title--dark-mode" data-aos="fade-left"
+                        data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="100">Контакти</h2>
+                    <div class="contact__wrapper">
+                        <address class="contact__links">
+                            <ul class="list">
+                                <li class="contact__item" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                                    data-aos-duration="1000" data-aos-delay="200">
+                                    <a class="contact__link" href="https://goo.gl/maps/S13B71cPM89bUmLEA"
+                                        target="_blank" rel="noopener noreferrer" aria-label="Адреса сайту">
+                                        <svg class="contact__icon">
+                                            <use href="./img/sprits/sprit.svg#icon-map"></use>
+                                        </svg>
+                                        вул. Василькова,
+                                        7А Київ, 08132
+                                    </a>
+                                </li>
+                                <li class="contact__item" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                                    data-aos-duration="1000" data-aos-delay="300">
+                                    <a class="contact__link" href="tel:+380441111111" target="_blank"
+                                        rel="noopener noreferrer" aria-label="Номер телефону сайту">
+                                        <svg class="contact__icon">
+                                            <use href="./img/sprits/sprit.svg#icon-phone"></use>
+                                        </svg>
+                                        +38 044 111 11 11
+                                    </a>
+                                </li>
+                                <li class="contact__item" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                                    data-aos-duration="1000" data-aos-delay="400">
+                                    <a class="contact__link" href="mailto:barbershop@email.com" target="_blank"
+                                        rel="noopener noreferrer" aria-label="E-mail сайту">
+                                        <svg class="contact__icon">
+                                            <use href="./img/sprits/sprit.svg#icon-mail"></use>
+                                        </svg>
+                                        barbershop@email.com
+                                    </a>
+                                </li>
+                            </ul>
+                        </address>
+
+                        <div class="contact__group">
+                            <h3 class="uppertitle uppertitle--dark-mode"><span class="contact__uppertitle"
+                                    data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000"
+                                    data-aos-delay="500">час
+                                    роботи</span>
+                            </h3>
+                            <p class="contact__time" data-aos="fade-left" data-aos-easing="ease-out-cubic"
+                                data-aos-duration="1000" data-aos-delay="500">Щодня з
+                                <time datetime="09:00">9:00</time>
+                                до
+                                <time datetime="22:00">22:00</time>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Розділ footer -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <p class="footer__uppertitle">&#169; Copyright 2022</p>
+
+            <!-- Соціальні мережі -->
+            <ul class="social-links-list list">
+                <li class="social-links-list__item">
+                    <a class="social-links-list__link link" href="" target="_blank" rel="noopener noreferrer"
+                        aria-label="instagram">Instagram</a>
+                </li>
+                <li class="social-links-list__item">
+                    <a class="social-links-list__link link" href="" target=" _blank" rel="noopener noreferrer"
+                        aria-label="youtube">Youtube</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Backdrop та модальне вікно -->
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+
+            <!-- Вихід з модального вікна -->
+            <div class="modal__wrapper-btn">
+                <button class="modal__btn-exit" data-modal-close type="button">
+                    <svg class="modal__icon-exit" width="11" height="11">
+                        <use href="./img/sprits/sprit.svg#icon-exit"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Форма замовлення послуги -->
+            <form class="md-form">
+                <strong class="md-form__title">Оставьте заявку на стрижку</strong>
+
+                <!-- Дані замовника -->
+                <label class="md-form__label">
+                    <!-- Інпут -->
+                    <span>Ім'я<span class="decor"> *</span></span>
+                    <input class="md-form__input" type="text" name="user-name" minlength="3" placeholder=" " required>
+                    <svg class="md-form__icon" width="20" height="20">
+                        <use href="./img/sprits/sprit.svg#icon-man-black"></use>
+                    </svg>
+
+                    <!-- Підказки -->
+                    <span class="md-form__txt-error txt-error">Минимальния длинна 3 символа</span>
+                    <svg class="md-form__icons-error" width="20" height="20">
+                        <use class="icon-attention" href="./img/sprits/sprit.svg#icon-attention">
+                        </use>
+                        <use class="icon-success" href="./img/sprits/sprit.svg#icon-success"></use>
+                    </svg>
+                </label>
+
+                <label class="md-form__label">
+                    <!-- Інпут -->
+                    <span>Телефон<span class="decor"> *</span></span>
+                    <input class="md-form__input" type="text" name="user-phone" placeholder=" " required>
+                    <svg class="md-form__icon" width="20" height="20">
+                        <use href="./img/sprits/sprit.svg#icon-tel-black"></use>
+                    </svg>
+
+                    <!-- Підказки -->
+                    <span class="md-form__txt-error txt-error">Введите номер телефона в формате +38 099 123 45 67</span>
+                    <svg class="md-form__icons-error" width="20" height="20">
+                        <use class="icon-attention" href="./img/sprits/sprit.svg#icon-attention">
+                        </use>
+                        <use class="icon-success" href="./img/sprits/sprit.svg#icon-success"></use>
+                    </svg>
+                </label>
+
+                <label class="md-form__label">
+                    <!-- Інпут -->
+                    <span>Пошта<span class="decor"> *</span></span>
+                    <input class="md-form__input" type="text" name="user-mail" placeholder=" " required>
+                    <svg class="md-form__icon" width="20" height="20">
+                        <use href="./img/sprits/sprit.svg#icon-mail-black"></use>
+                    </svg>
+
+                    <!-- Підказки -->
+                    <span class="md-form__txt-error txt-error">Введите почту в формате example@mail.com</span>
+                    <svg class="md-form__icons-error" width="20" height="20">
+                        <use class="icon-attention" href="./img/sprits/sprit.svg#icon-attention">
+                        </use>
+                        <use class="icon-success" href="./img/sprits/sprit.svg#icon-success"></use>
+                    </svg>
+                </label>
+
+                <!-- Блок оплати -->
+                <div class="pay-type md-form__pay-type" role="group" aria-labelledby="pay-type-title">
+                    <strong class="pay-type__title" id="pay-type-title">Виберите форму оплаты</strong>
+
+                    <div class="pay-type__pay-group">
+                        <label class="pay-type__label">
+                            <input class="pay-type__checkbox visually-hidden" type="radio" name="user-pay" checked>
+                            <svg class="pay-icon" width="50" height="50">
+                                <use href="./img/sprits/sprit.svg#icon-ms-card"></use>
+                            </svg>
+                        </label>
+
+                        <label class="pay-type__label">
+                            <input class="pay-type__checkbox visually-hidden" type="radio" name="user-pay">
+                            <svg class="pay-icon" width="50" height="50">
+                                <use href="./img/sprits/sprit.svg#icon-visa"></use>
+                            </svg>
+                        </label>
+                    </div>
+
+                </div>
+
+
+                <!-- Політика приватності(чекбокс) -->
+                <div class="checkbox checkbox-group">
+
+                    <label class="checkbox__label">
+                        <input class="checkbox__input visually-hidden" type="checkbox">
+                        <span class="checkbox__icon"></span>
+                        Погоджуюся з розсилкою і приймаю
+                        <a class="checkbox__link" href="">
+                            Умови договору
+                        </a>
+                    </label>
+
+                    <!-- Кнопка відправки форми -->
+                    <button class="btn btn--light-mode" type="submit">Відправити</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Скрипти -->
+    <script src="./js/header-scroll.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
+
+    <!-- Анімація -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/animations.js"></script>
+</body>
+
 </html>

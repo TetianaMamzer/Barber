@@ -1,0 +1,62 @@
+// Соціальні мережі сайту
+.hero__left-side {
+    display: none;
+
+    // планшет
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: flex-end;
+
+        width: 100px;
+    }
+}
+
+.social-links-list {
+    display: flex;
+    align-items: center;
+
+    // лінія
+    &::before {
+        content: '';
+        display: block;
+
+        width: 60px;
+        height: 1px;
+
+        background-color: getColor('title');
+    }
+}
+
+.hero__social-links-list {  
+    margin-bottom: 60px;
+
+    transform-origin: left top;
+    transform: 
+        translateX(28px)
+        translateY(50px) 
+        rotate(-90deg);
+}
+
+.social-links-list__link {
+    margin-left: 40px;
+
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+
+    color: getColor('title');
+
+    transition: color $animation;
+
+    // хвер та фокус
+    &:hover,
+    &:focus {
+        color: getColor('accent');
+    }
+
+    // телефон
+    @media screen and (max-width: 767.5px) {
+        margin-left: 15px;
+    }
+}

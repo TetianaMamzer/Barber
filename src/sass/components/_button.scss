@@ -1,0 +1,57 @@
+// Кнопка
+.btn {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    min-width: 160px;
+    max-height: 40px;
+
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+   
+    background-color: transparent;
+
+    border: 1px solid getColor('accent');
+    border-radius: 25px;
+    cursor: pointer;
+
+    transition: 
+        color $animation,
+        background-color $animation;
+
+    // на темному фоні
+    &--dark-mode {
+        color: getColor('white');   
+    }
+
+    // на світлому фоні
+    &--light-mode {
+        color: getColor('title'); 
+    }
+
+    // ховер та фокус
+    &:hover,
+    &:focus {
+        background-color: getColor('accent');
+        color: getColor('white');
+        outline: transparent;
+    }
+
+    // анімація (розділ хеадер)
+    &--anim-pulse {
+        animation: animate_pulse 1.5s infinite;
+    }
+
+    // планшет
+    @media screen and (min-width: 768px) {
+        &--page-header {
+            color: getColor('white');
+        }
+    }
+}

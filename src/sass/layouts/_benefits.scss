@@ -1,0 +1,115 @@
+// Розділ переваги
+.benefits__container {
+    display: flex;
+
+    // телефон та паншет
+    @media screen and (max-width: 1199.5px) {
+        flex-direction: column-reverse;
+    }
+}
+
+// Ліва частина
+.benefits__left-side {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: center;
+
+    // планшет
+    @media screen and (min-width: 768px) and (max-width: 1199.5px) {
+       justify-content: end;
+    }
+}
+
+.benefits__list {
+    display: flex;
+    flex-basis: 370px;
+    justify-content: flex-start;
+}
+
+.benefits__wrapper {
+    margin-top: 30px;
+}
+
+.benefits__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+
+    width: 170px;
+    min-height: 133px;
+   
+    background-color: getColor('light-bg-cl');
+
+    // отступи
+    &:nth-child(2n+1) {
+        margin-bottom: 30px;
+        margin-right: 30px;
+    }
+
+    &:nth-child(2n+2) {
+        margin-top: 30px;
+    }
+}
+
+.benefits__amount {
+    position: relative;
+
+    margin-top: 0;
+    margin-bottom: 6px;
+
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.35;
+    letter-spacing: 0.05em;
+
+    color: getColor('title');
+}
+
+.benefits__decor {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    margin-left: 6px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.38;
+
+    color: getColor('accent');
+
+    transform: translate(12px, 0);
+    transform-origin: left center;
+}
+
+.benefits__desc {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    text-align: center;
+
+    color: getColor('title');
+}
+
+// Права чатстина
+.benefits__right-side {
+    // телефон та планшет
+    @media screen and (max-width: 1199.5px) {
+        margin-bottom: 44px;
+    }
+
+    // планшет
+    @media screen and (min-width: 768px) {
+        width: 475px;
+    }
+
+    // пк
+    @media screen and (min-width: 1200px) {
+       margin-left: 22px;
+    }
+}

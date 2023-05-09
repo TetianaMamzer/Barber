@@ -1,0 +1,29 @@
+// Backdrop для модального вікна
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+
+    padding-top: 93px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 93;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    overflow-y: scroll;
+    opacity: 1;
+    transition: opacity $animation ,
+                visibility $animation ;
+}
+
+// Для приховання Backdrop
+.backdrop.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}

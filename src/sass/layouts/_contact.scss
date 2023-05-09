@@ -1,0 +1,190 @@
+// Розділ контакти
+.contact {
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 480px;
+
+    background-color: getColor('main-bg-cl');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+
+    // фонові зображення
+    @media screen and (max-width: 576px) {
+        background-image:
+            url(../img/contact/mobile/bg.png);
+    }
+
+    @media screen and (min-width: 577px) and (max-width: 1199.5px) {
+        background-image:
+            url(../img/contact/tablet/bg.png);
+    }
+
+    @media screen and (min-width: 1200px) {
+        background-image:
+            url(../img/contact/pc/bg.png);
+    }
+    
+    // телефон
+    @media screen and (min-width: 480px) {
+        background-size: 100% 496px, cover;
+    }
+
+    // планшет
+    @media screen and (min-width: 768px) {
+        max-width: 768px;
+        background-size: 768px 449px, cover;
+    }
+
+    // пк
+    @media screen and (min-width: 1200px) {
+        max-width: 1280px;
+        background-position: top right,center;
+        background-size: 600px 644px, cover;
+    }
+}
+
+// Фонове зображення для retina-екранів
+@media screen and (max-width: 576px) {
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .contact {
+            background-image:
+                url(../img/contact/mobile/bg-2x.png);
+        }
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 1199px) {
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .contact {
+            background-image:
+                url(../img/contact/tablet/bg-2x.png);
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .contact {
+            background-image:
+                url(../img/contact/pc/bg-2x.png);
+        }
+    }
+}
+
+.contact__container {
+    // пк
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contact__title {  
+    margin-bottom: 44px;
+    color: getColor('white');
+
+    // телефон
+    @media screen and (max-width: 767.5px) {
+        text-align: center;
+    }
+}
+
+// Контакти сайту
+.contact__right-side {
+    flex-basis: 470px;
+
+    // телефон
+    @media screen and (max-width: 767.5px) {
+        padding-top: 84px;
+    }
+
+    // планшет
+    @media screen and (max-width: 1199.5px) {
+        padding-top: 100px;
+    }
+}
+
+.contact__links {
+    margin-bottom: 44px;  
+
+    // планшет
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+    }
+
+    // пк
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 70px;
+    }
+}
+
+.contact__item {
+    // відступи
+    &:nth-child(n+2) {
+        margin-top: 20px;
+    }
+}
+
+.contact__link {
+    display: flex;
+    align-items: center;
+
+    font-style: normal;
+    text-decoration: none;
+}
+
+.contact__link,
+.contact__time {
+    font-size: 18px;
+    line-height: 1.66;
+    letter-spacing: 0.02em;
+
+    color: getColor('secondary');
+
+    transition: color $animation;
+}
+
+.contact__link:hover,
+.contact__link:focus {
+    color: getColor('accent');
+}
+
+.contact__icon {
+    margin-right: 16px;
+
+    width: 24px;
+    height: 24px;
+
+    fill: currentColor;
+    transition: fill $animation;
+}
+
+.contact__uppertitle {
+    color: getColor('white');
+}
+
+.contact__wrapper {
+    // планшет
+    @media screen and (min-width: 768px) and (max-width: 1199.5px) {
+        display: flex;
+
+        .contact__group {
+            margin-left: 130px;
+        }
+    }
+}
+
+.contact__time {
+    margin-top: 0;
+    margin-bottom: 0;
+}

@@ -1,0 +1,54 @@
+// Розділ про нас
+.about__container {
+    display: flex;
+}
+
+// Фотографії
+.photos {
+    // телефон
+    @media screen and (max-width: 767.5px) {
+        display: none;
+    }
+}
+
+// Опис
+.about__description-group {
+    max-width: 393px;
+
+    // планшет
+    @media screen and (min-width: 768px) {
+        max-width: 330px;
+        margin-left: 30px;
+    }
+
+    // пк
+    @media screen and (min-width: 1200px) {
+        max-width: 475px;
+        margin-left: 65px;
+    }
+}
+
+.title--about-mb {
+    // телефон та планшет
+   @media screen and (max-width: 1199.5px) {
+        font-size: 28px;
+        line-height: 1.17;
+   }
+}
+
+.subtitle--about-mb {
+    // телефон та планшет
+    @media screen and (max-width: 1199.5px) {
+        font-size: 16px;
+        line-height: 1.62;
+    }
+}
+
+.description-txt {
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    font-size: 14px;
+    line-height: 1.85;
+    letter-spacing: 0.02em;
+}
