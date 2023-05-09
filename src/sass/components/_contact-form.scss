@@ -88,12 +88,12 @@
 // Підпис
 .form__label {
     position: absolute;
-    top: 50%;       
+    top: 0%;       
     left: 0;
 
     display: block;
 
-    transform: translateY(-50%);
+    transform: translateY(-150%);
 }    
 
 .form__label,
@@ -207,8 +207,9 @@
 
 .form__message-label {
     position: absolute;
-    top: 0;
+    top: 0%;
     left: 0;
+    transform: translateY(-150%);
 }
 
 .form__message:focus + .form__message-label,
